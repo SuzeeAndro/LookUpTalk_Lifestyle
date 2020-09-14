@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/footer"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="bottom|center"
+                    android:orientation="vertical">
+
+                    <com.lookuptalk.customfonts.Ferrara_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:background="@color/_gray_getstarted"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_40sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:letterSpacing="0.1"
+                        android:paddingRight="@dimen/_40sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/nomore_social"
+                        android:textAllCaps="true"
+                        android:textColor="@color/getstarted_blue"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic1" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/clubs"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic2" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/restaurant"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic3" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/cafes"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic4" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/beached"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic5" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/airport"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic6" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/conferences"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic7" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/expo_trade"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_146sdp"
+                                        android:layout_height="@dimen/_89sdp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/pic8" />
+
+                                    <com.lookuptalk.customfonts.MyTextView_Bold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/events"
+                                        android:textColor="@color/getstarted_blue"
+                                        android:textSize="@dimen/_15sdp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_30sdp"
+                                android:layout_marginRight="@dimen/_30sdp"
+                                android:background="@color/_gray_getstarted"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <com.lookuptalk.customfonts.Ferrara_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/meet_converse"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/getstarted_blue"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold" />
+
+                                <com.lookuptalk.customfonts.Ferrara_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:letterSpacing="0.1"
+                                    android:text="@string/meet_connections"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/getstarted_blue"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <com.lookuptalk.customfonts.MyTextView_Normal
+                                android:id="@+id/tvGetStarted"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@drawable/otp_bg"
+                                android:gravity="center"
+                                android:onClick="onClick"
+                                android:text="@string/get_started"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_20sdp" />
+                        </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,61 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="snackbar_textsize">20sp</dimen>
+
+    <integer name="image_width_landscape">966</integer>
+    <integer name="image_width">1288</integer>
+
+    <dimen name="color_width">48dp</dimen>
+    <dimen name="color_height">48dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="_5sdp">5dp</dimen>
+    <dimen name="_1sdp">1dp</dimen>
+    <dimen name="_2sdp">2dp</dimen>
+    <dimen name="_14sdp">14dp</dimen>
+    <dimen name="_10sdp">10dp</dimen>
+    <dimen name="_12sdp">12dp</dimen>
+    <dimen name="_13sdp">13dp</dimen>
+    <dimen name="_30sdp">30dp</dimen>
+    <dimen name="_35sdp">35dp</dimen>
+    <dimen name="_15sdp">15sp</dimen>
+    <dimen name="_16sdp">16sp</dimen>
+    <dimen name="_17sdp">17sp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_40sdp">40dp</dimen>
+    <dimen name="_50sdp">50dp</dimen>
+    <dimen name="_70sdp">70dp</dimen>
+    <dimen name="_80sdp">80dp</dimen>
+    <dimen name="_90sdp">90dp</dimen>
+    <dimen name="_60sdp">60dp</dimen>
+    <dimen name="_100sdp">100dp</dimen>
+    <dimen name="_150dp">150dp</dimen>
+
+    <dimen name="item_height">34dp</dimen>
+    <dimen name="popup_padding_left">24dp</dimen>
+    <dimen name="popup_padding_top">12dp</dimen>
+    <dimen name="tool_bar_text">22sp</dimen>
+    <dimen name="navigation_drawer_width">340dp</dimen>
+
+    <dimen name="_146sdp">146dp</dimen>
+    <dimen name="_89sdp">89dp</dimen>
+
+    <!-- Font Sizes-->
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+
+    <!-- Sizes -->
+    <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="option_min_height">48dp</dimen>
+    <dimen name="shadow_height">4dp</dimen>
+    <dimen name="selectProfile_layout">212dp</dimen>
+
+</resources>

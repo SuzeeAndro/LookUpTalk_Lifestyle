@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lookuptalk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/lookup_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/lookup_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.PersonalDetailsActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GetStartedActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.Verfication_Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.Profile_Selection"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.Lifestyle_Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SelectProfileActivity"
+            android:screenOrientation="portrait" />
+
+<!--        <activity-->
+<!--            android:name=".ui.PersonalDetailsActivity"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".ui.ProfessionalDetails_Activity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.SocialFilter_Personal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SocialFilter_Professional"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".helper.SmsBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <!--Facebook-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+    </application>
+
+</manifest>

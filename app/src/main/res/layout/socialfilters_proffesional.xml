@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_header" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_30sdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <com.lookuptalk.customfonts.MyTextView_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/industry"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <Spinner
+                            android:id="@+id/sp_professIndistry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/industries_list"
+                            android:padding="@dimen/_15sdp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <com.lookuptalk.customfonts.MyTextView_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/designation"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <Spinner
+                            android:id="@+id/sp_profess_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/industries_list"
+                            android:padding="@dimen/_15sdp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <com.lookuptalk.customfonts.MyTextView_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/annual_income"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_1_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="@string/income_1_5" />
+
+                        <CheckBox
+                            android:id="@+id/cb_5_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="@string/income_5_10" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_10_20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="@string/income_10_20" />
+
+                        <CheckBox
+                            android:id="@+id/cb_20_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:text="@string/income_20_50" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb_50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:checked="false"
+                        android:text="@string/income_50" />
+
+                    <com.lookuptalk.customfonts.MyTextView_Bold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/key_skills"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <Spinner
+                            android:id="@+id/sp_profess_skills"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/industries_list"
+                            android:padding="@dimen/_15sdp" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:gravity="center">
+
+
+        <com.lookuptalk.customfonts.MyTextView_Normal
+            android:id="@+id/tv_filterProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/otp_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/proceed"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

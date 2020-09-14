@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">Lookuptalk</string>
+
+    <!--Get Started-->
+    <string name="clubs">Clubs</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="cafes">Cafes</string>
+    <string name="beached">Beaches</string>
+    <string name="airport">Airport Lounges &amp; \n Terminal</string>
+    <string name="conferences">Conferences</string>
+    <string name="expo_trade">Expo &amp; Trade Center</string>
+    <string name="events">Events</string>
+    <string name="meet_converse">Meet &amp; Converse with People</string>
+    <string name="meet_connections">Meet connections on the Move</string>
+
+    <!--Facebook ID-->
+    <string name="facebook_app_id">662883431323157</string>
+    <string name="fb_login_protocol_scheme">MY_PROTOCOL_SCHEME</string>
+
+
+    <!--Login In-->
+    <string name="login_text">Log in</string>
+    <string name="nomore_social">No More Social Distancing</string>
+    <string name="splash_text">Outer Networks Holdings Inc</string>
+    <string name="or">OR</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="get_started">Get Started</string>
+    <string name="signup_gmail">Signup with Gmail</string>
+    <string name="enter_mobile">Enter your mobile number</string>
+    <string name="otp_verifcation">OTP Verification</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="verify">Verify</string>
+    <string name="build_profile">Build your Profile</string>
+    <string name="social">Social</string>
+    <string name="social_filter">Social Filter</string>
+    <string name="professional_filter">Professional Filter</string>
+    <string name="professional">Professional</string>
+    <string name="fill_yourself">Fill by Yourself</string>
+    <string name="fill_fb">Fill From Facebook</string>
+    <string name="fill_likdin">Fill From Linkedin</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="personal_details">Personal Details</string>
+
+    <!--lifestyles-->
+    <string name="hobbies_intrest">Hobbies &amp; Interest</string>
+    <string name="music">Music</string>
+    <string name="books">Books</string>
+    <string name="sports">Sports</string>
+    <string name="fashion_brand">Fashion Brands</string>
+    <string name="cusine">Cuisine</string>
+    <string name="movies">Movies</string>
+    <string name="tvshows">TV Shows</string>
+    <string name="countries_visited">Countries Travelled</string>
+    <string name="pets_care">Pets</string>
+    <string name="letsgo">Let\'s Go</string>
+    <string name="go_ahead">Go Ahead</string>
+    <string name="submit">Submit</string>
+
+    <!--{ersonal Details-->
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="sex">Sex</string>
+    <string name="sex_orient">Sexual Orientation</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="location">Location</string>
+    <string name="experience">Experience</string>
+    <string name="qualification">Qualification</string>
+    <string name="height">Height</string>
+    <string name="body_type">Body Type</string>
+    <string name="industry">Industry</string>
+    <string name="occupation">Occupation</string>
+    <string name="designation">Designation</string>
+    <string name="smoke">Smoke</string>
+    <string name="drink">Drink</string>
+    <string name="annual_income">Annual Income Range</string>
+    <string name="myinfo">My Info</string>
+    <string name="proceed">Proceed</string>
+    <string name="fill_more">Fill more about me</string>
+    <string name="addphotos_video">Add Photos/Videos</string>
+
+    <string name="income_1_5">1-5 Lakhs</string>
+    <string name="income_5_10">5-10 Lakhs</string>
+    <string name="income_10_20">10-20 Lakhs</string>
+    <string name="income_20_50">20-50 Lakhs</string>
+    <string name="income_50">50+ Lakhs</string>
+
+    <string-array name="designation_list">
+        <item>one</item>
+        <item>two</item>
+    </string-array>
+    <string-array name="sexual_orient">
+        <item>Straight</item>
+        <item>LGBTQ</item>
+        <item>Don’t Wish to Specify</item>
+    </string-array>
+    <string-array name="sex_list">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="marital_list">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Separated</item>
+        <item>Committed</item>
+        <item>Don’t Wish to Specify</item>
+    </string-array>
+
+    <string-array name="qualification_list">
+        <item>Bachelors/Under Graduate</item>
+        <item>Masters/Post Graduate</item>
+        <item>Double Masters</item>
+        <item>PHD/Doctorate</item>
+        <item>Professional Course</item>
+        <item>Don’t Wish to Specify</item>
+    </string-array>
+    <string-array name="bodytype_list">
+        <item>Very Slim</item>
+        <item>Slim</item>
+        <item>Average Build</item>
+        <item>Muscular</item>
+        <item>Heavy Build</item>
+        <item>Don’t Wish to Specify</item>
+    </string-array>
+
+
+    <string-array name="industries_list">
+        <item>one</item>
+        <item>two</item>
+    </string-array>
+    <string-array name="height_list">
+        <item>one</item>
+        <item>two</item>
+    </string-array>
+    <string name="industries_interested">Industries Interested</string>
+    <string name="key_skills">Key Skills</string>
+    <string name="about_myself">Tell us about yourself \n (make it interesting)</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+
+    <string name="max_selectable_media_count">Maximum selectable media count</string>
+    <string name="grid_column_count">Grid column count</string>
+    <string name="image_compression">Image compression</string>
+    <string name="compression_max_width">Compression maximum width</string>
+    <string name="compression_max_height">Compression maximum height</string>
+    <string name="compression_quality">Compression quality(%)</string>
+    <string name="image_gallery">Image Gallery</string>
+    <string name="video_gallery">Video Gallery</string>
+    <string name="image_and_video_gallery">Image &amp; Video Gallery</string>
+    <string name="selected_media_title">Selected Media</string>
+
+
+    <string name="age_range">Age Range</string>
+    <string name="graduate">Graduate</string>
+    <string name="under_graduate">Under Graduate</string>
+    <string name="post_gradeuate">Post Graduate</string>
+    <string name="doctrate">Doctrate</string>
+    <string name="masters">Masters</string>
+    <string name="married">Married</string>
+    <string name="unmarried">Unmarried</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="popular">Popular</string>
+    <string name="popular_brands">Popular Brands</string>
+    <string name="indoor">Indoor</string>
+    <string name="outdoor">Outdoor</string>
+    <string name="genre">Genre</string>
+    <string name="premium">Premium Brands</string>
+    <string name="casual">Casual Brands</string>
+    <string name="global">Global</string>
+    <string name="channel">CHANNELS</string>
+    <string name="regional">Regional</string>
+    <string name="sportswear">Sportswear Brands</string>
+    <string name="designer">Designer Brands</string>
+    <string name="official">Office wear Brands</string>
+    <string name="makeup">Leather Accessories \n Jewelry Makeup</string>
+    <string name="asia">Asia</string>
+    <string name="europe">Europe</string>
+    <string name="n_america">North America</string>
+    <string name="s_america">South America</string>
+    <string name="australia">Australia</string>
+    <string name="africa">Africa</string>
+    <string name="connect_music">Connect your Music with</string>
+</resources>

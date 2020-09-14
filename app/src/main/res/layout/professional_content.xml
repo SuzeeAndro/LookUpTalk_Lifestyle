@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/selectProfile_layout"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.lookuptalk.customfonts.Ferrara_Bold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:textColor="@color/black"
+                android:text="@string/addphotos_video"
+                android:textSize="@dimen/_20sdp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                android:layout_rowWeight="1"
+                android:background="@drawable/image_border"
+                android:layout_columnWeight="1"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.lookuptalk.helper.SelectableRoundedImageView
+                        android:id="@+id/ivprofe_ProfileImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/pic5"
+                        android:layout_marginLeft="@dimen/_50sdp"
+                        android:scaleType="centerCrop"
+                        app:sriv_left_bottom_corner_radius="30dip"
+                        app:sriv_left_top_corner_radius="16dip"
+                        app:sriv_right_bottom_corner_radius="16dip"
+                        app:sriv_right_top_corner_radius="30dip" />
+
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/prof_fab_camera"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="bottom|right"
+                        android:onClick="onClick"
+                        android:background="@color/white"
+                        android:src="@drawable/ic__camera"
+                        app:elevation="6dp"
+                        android:tint="@android:color/white"
+                        app:fabSize="normal"
+                        android:layout_marginLeft="-30dp"
+                        app:fab_colorNormal="@color/white"
+                        app:fab_colorPressed="@color/gray"
+                        app:fab_colorRipple="@color/white_gray"
+                        app:pressedTranslationZ="12dp" />
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectedMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="1dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.lookuptalk.customfonts.MyTextView_Bold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/myinfo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@color/_gray_white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/name"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <com.lookuptalk.customfonts.EditeText_font
+                        android:id="@+id/etprof_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:inputType="textCapWords"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/sex"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_prof_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:entries="@array/sex_list"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/location"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <com.lookuptalk.customfonts.EditeText_font
+                        android:id="@+id/etprof_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/location"
+                        android:inputType="number|textCapWords"
+                        android:maxLength="2"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/industry"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:padding="@dimen/_15sdp" />
+                </androidx.cardview.widget.CardView>
+
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/designation"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/experience"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:entries="@array/qualification_list"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/qualification"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_qualificaiton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/designation_list"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/annual_income"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                  <include layout="@layout/age_layout"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/industries_interested"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_Industries_interested"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/key_skills"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <Spinner
+                        android:id="@+id/sp_keyskills"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <com.lookuptalk.customfonts.EditeText_font
+                        android:id="@+id/etAboutmyself"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/about_myself"
+                        android:padding="@dimen/_15sdp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_30sdp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:orientation="horizontal">
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/age_range"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:id="@+id/tvAgeRange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_20sdp" />
+
+                    </LinearLayout>
+
+                    <com.mohammedalaa.seekbar.DoubleValueSeekBarView
+                        android:id="@+id/double_range_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:r2CurrentMaxValue="40"
+                        app:r2CurrentMinValue="20"
+                        app:r2barHeight="15dp"
+                        app:r2baseColor="@color/rangebar_gray"
+                        app:r2circleFillColor="@color/range_blue"
+                        app:r2circleRadius="15dp"
+                        app:r2circleTextColor="@color/white"
+                        app:r2circleTextSize="@dimen/value_bar_circleTextSize"
+                        app:r2fillColor="@color/blue"
+                        app:r2maxValue="90"
+                        app:r2maxValueStep="10"
+                        app:r2minValue="15"
+                        app:r2minValueStep="5" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:background="@color/white_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/qualification"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_graduate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="@string/graduate" />
+
+                            <CheckBox
+                                android:id="@+id/cb_undergraduate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="@string/under_graduate" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_postgrad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="@string/post_gradeuate" />
+
+                            <CheckBox
+                                android:id="@+id/cb_doctrate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:checked="false"
+                                android:text="@string/doctrate" />
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/cb_masters"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:checked="false"
+                            android:text="@string/masters" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:background="@color/white_gray" />
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/marital_status"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_married"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:checked="false"
+                                android:text="@string/married" />
+
+                            <CheckBox
+                                android:id="@+id/cb_unmarried"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:checked="false"
+                                android:text="@string/unmarried" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:background="@color/white_gray" />
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/sex"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:checked="false"
+                                android:text="@string/male" />
+
+                            <CheckBox
+                                android:id="@+id/cb_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:checked="false"
+                                android:text="@string/female" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:background="@color/white_gray" />
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/height"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <Spinner
+                                android:id="@+id/sp_filter_height"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/industries_list"
+                                android:padding="@dimen/_15sdp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <com.lookuptalk.customfonts.MyTextView_Bold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/industry"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_15sdp" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <Spinner
+                                android:id="@+id/sp_filter_industry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/industries_list"
+                                android:padding="@dimen/_15sdp" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/smoke"
+                                    android:textSize="@dimen/_15sdp" />
+
+                                <Switch
+                                    android:id="@+id/switch_smoke"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textOn="on"
+                                    android:theme="@style/SCBSwitch" />
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/drink"
+                                    android:textSize="@dimen/_15sdp" />
+
+                                <Switch
+                                    android:id="@+id/switch_drink"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textOn="on"
+                                    android:theme="@style/SCBSwitch" />
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

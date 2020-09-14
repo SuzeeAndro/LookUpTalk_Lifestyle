@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivFlagImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/tommy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lookuptalk.customfonts.MyTextView_Normal
+        android:id="@+id/tvFlagName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:text="asdfsd"
+        android:textColor="@color/flag_textcolor"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFlagImage" />
+
+    <!--        <com.lookuptalk.customfonts.MyTextView_Normal-->
+    <!--            android:id="@+id/tvFlagName"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:padding="@dimen/_2sdp"-->
+    <!--            android:text="@string/social"-->
+    <!--            android:textAlignment="center"-->
+    <!--            android:textColor="@color/flag_textcolor"-->
+    <!--            android:textSize="@dimen/_17sdp"-->
+    <!--            android:visibility="visible" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@color/white"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBackLifstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_backarrow" />
+
+                <com.lookuptalk.customfonts.Ferrara_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lifestyle"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_30sdp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llHobbies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_hobbies" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:id="@+id/tvlifestyle_Name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/hobbies_intrest"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llMusic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/drum" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/music"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llBooks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/books" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/books"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llSports"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_golf" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/sports"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llFashion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/dress" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/fashion_brand"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llCuisine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_cuisine" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/cusine"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llMovies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_movies" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/movies"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/lltvshows"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_tv_show" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/tvshows"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llCountrisVisited"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="53dp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_countries" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/countries_visited"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:background="@color/line_gray" />
+
+                            <LinearLayout
+                                android:id="@+id/llPets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:onClick="onClick"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:src="@drawable/ic_pets" />
+
+
+                                <com.lookuptalk.customfonts.MyTextView_Normal
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/pets_care"
+                                    android:textColor="@color/flag_textcolor"
+                                    android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_next" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp"
+        android:paddingRight="@dimen/_40sdp"
+        android:paddingLeft="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <com.lookuptalk.customfonts.MyTextView_Normal
+            android:id="@+id/tv_go_ahead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_bg"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/go_ahead"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+    </RelativeLayout>
+</RelativeLayout>
+

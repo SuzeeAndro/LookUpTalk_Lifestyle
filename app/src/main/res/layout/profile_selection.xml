@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.lookuptalk.customfonts.Ferrara_Bold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="@string/build_profile"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:id="@+id/llSocial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_146sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/social_images" />
+
+
+                </LinearLayout>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:id="@+id/tvsocialtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_gray"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/social"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_20sdp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:id="@+id/llProfessional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_146sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_profesional" />
+
+
+                </LinearLayout>
+
+                <com.lookuptalk.customfonts.MyTextView_Normal
+                    android:id="@+id/tvprofessionaltext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_gray"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/professional"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_20sdp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <com.lookuptalk.customfonts.MyTextView_Normal
+        android:id="@+id/tv_fillby_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/otp_bg"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/fill_fb"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:visibility="invisible" />
+
+
+    <com.lookuptalk.customfonts.MyTextView_Normal
+        android:id="@+id/tv_fillbyyourself"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/otp_bg"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/fill_yourself"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

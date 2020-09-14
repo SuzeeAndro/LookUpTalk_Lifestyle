@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="selected_flag">#2873D1</color>
+    <color name="search_color">#686868</color>
+
+
+    <color name="green">#1ED760</color>
+    <color name="gray">#6A6A6A</color>
+    <color name="flag_textcolor">#3B3737</color>
+    <color name="gray3">#8F8F8F</color>
+    <color name="getstart_text">#07579C</color>
+    <color name="white_gray">#F5F5F5</color>
+    <color name="gray2">#EBEBEB</color>
+    <color name="getstarted_blue">#2670CF</color>
+    <color name="line_gray">#E2E2E2</color>
+    <color name="rangebar_gray">#EEEEEE</color>
+    <color name="otp_line">#C7C7C7</color>
+    <color name="light_gray">#ABABAB</color>
+    <color name="_gray_white">#F1F1F1</color>
+    <color name="_gray_getstarted">#F2EFEF</color>
+    <color name="blue">#256FCE</color>
+    <color name="light_blue">#47A1F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="google_plus">#F44336</color>
+    <color name="fb_bg">#7386E8</color>
+    <color name="blue_switch">#1258E5</color>
+    <color name="range_blue">#3D92E9</color>
+    <color name="light_blue_1">#E5ECF2</color>
+    <color name="colorImagePlaceHolder">#FCFCFC</color>
+    <color name="or_border">#A7A7A7</color>
+    <color name="select_profile">#D5E3F5</color>
+
+
+    <color name="colorPageBackground">#F4F5F6</color>
+
+    <color name="colorText">#202020</color>
+    <color name="colorTextInactive">#A6A6A6</color>
+
+    <color name="silverDarken">#A6A6A6</color>
+    <color name="silver">#CDCDCD</color>
+
+
+</resources>
