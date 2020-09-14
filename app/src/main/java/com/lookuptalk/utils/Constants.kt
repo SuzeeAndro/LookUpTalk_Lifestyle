@@ -20,14 +20,6 @@ object Constants {
         Color.rgb(227, 7, 30)
     )
 
-    val PREFS_NAME = "LOGIN DETAILS"
-
-
-    val OTHER = "Other"
-    val CALL_NOT_MADE = "Call Not Made"
-    val CALL_MADE = "Call Made"
-    val LOGINUSER_MOBILE = "login_mobile"
-
 
 
     val okHttpClient = OkHttpClient.Builder()
