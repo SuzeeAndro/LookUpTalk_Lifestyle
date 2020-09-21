@@ -20,8 +20,7 @@ import com.lookuptalk.model.Hobbies
 
 class FashionAdapter(
     private val mContext: Context,
-    private var mHobiesList: List<Hobbies>,
-    val value: String) :
+    private var mHobiesList: List<Hobbies>) :
     RecyclerView.Adapter<FashionAdapter.MyViewHolder>() {
 
     internal lateinit var mHobiesModel: Hobbies
@@ -63,8 +62,6 @@ class FashionAdapter(
 //
 //        }
 //
-
-
         Glide.with(mContext)
             .load(mHobiesModel.url)
             .into(holder.ivFlagImage);

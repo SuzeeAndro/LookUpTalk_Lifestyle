@@ -60,13 +60,13 @@
 
                     <ImageView
                         android:id="@+id/fab_camera"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
                         android:layout_gravity="center"
                         android:onClick="onClick"
                         android:layout_marginLeft="@dimen/_60sdp"
                         android:layout_marginTop="-50dp"
-                        android:src="@drawable/cam_icon" />
+                        android:src="@drawable/camera_icon" />
 
 
                 </LinearLayout>

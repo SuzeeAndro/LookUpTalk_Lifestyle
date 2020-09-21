@@ -16,7 +16,7 @@
         android:theme="@style/Theme.App"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.PersonalDetailsActivity"
+            android:name=".ui.Lifestyle_Activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,17 +40,17 @@
             android:name=".ui.Profile_Selection"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name=".ui.Lifestyle_Activity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".ui.Lifestyle_Activity"-->
+<!--            android:screenOrientation="portrait" />-->
 
         <activity
             android:name=".ui.SelectProfileActivity"
             android:screenOrientation="portrait" />
 
-<!--        <activity-->
-<!--            android:name=".ui.PersonalDetailsActivity"-->
-<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".ui.PersonalDetailsActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.ProfessionalDetails_Activity"
             android:screenOrientation="portrait" />

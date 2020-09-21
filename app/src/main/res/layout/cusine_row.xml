@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvLayout"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -12,7 +13,8 @@
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/tommy"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,7 +26,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/_2sdp"
-        android:text="asdfsd"
         android:textColor="@color/flag_textcolor"
         android:textSize="@dimen/_17sdp"
         app:layout_constraintLeft_toLeftOf="parent"

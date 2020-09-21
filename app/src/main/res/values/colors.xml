@@ -7,6 +7,7 @@
     <color name="selected_flag">#2873D1</color>
     <color name="search_color">#686868</color>
 
+    <color name="placeholder_bg">#dddddd</color>
 
     <color name="green">#1ED760</color>
     <color name="gray">#6A6A6A</color>

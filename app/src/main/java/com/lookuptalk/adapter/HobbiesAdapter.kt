@@ -9,10 +9,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
+import coil.api.load
 import com.bumptech.glide.Glide
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.model.Hobbies
+import okhttp3.HttpUrl
 
 class HobbiesAdapter(private val mContext: Context, private var mHobiesList: List<Hobbies>) :
     RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
@@ -49,10 +51,10 @@ class HobbiesAdapter(private val mContext: Context, private var mHobiesList: Lis
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         mHobiesModel = mHobiesList[position]
 
+        Glide.with(mContext).load(mHobiesModel.url).into(holder.ivFlagImage);
+//        holder.ivFlagImage.load(HttpUrl.get(mHobiesModel.url))
         holder.tvFlagName.text = mHobiesModel.name
-        Glide.with(mContext)
-            .load(mHobiesModel.url)
-            .into(holder.ivFlagImage);
+
         holder.llFlag.setBackgroundColor(if (mHobiesModel.isSelected) mContext.resources.getColor(R.color.selected_flag) else Color.WHITE)
         holder.llFlag.setOnClickListener(View.OnClickListener {
 
@@ -72,7 +74,7 @@ class HobbiesAdapter(private val mContext: Context, private var mHobiesList: Lis
                     text += mHobiesModel.name
                 }
             }
-            Log.d("TAG", "Output : $text")
+//            Log.d("TAG", "Output : $text")
 
         })
 

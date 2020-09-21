@@ -6,7 +6,9 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="snackbar_textsize">20sp</dimen>
-
+    <dimen name="placeholder_text_height">8dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="placeholder_image">90dp</dimen>
     <integer name="image_width_landscape">966</integer>
     <integer name="image_width">1288</integer>
 

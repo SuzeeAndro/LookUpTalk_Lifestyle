@@ -33,6 +33,7 @@ import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.model.Hobbies
 import com.lookuptalk.model.ModelFlag
 import kotlinx.android.synthetic.main.lifestyle_drawer.*
+import kotlinx.android.synthetic.main.lifestyle_navigation.*
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
@@ -86,12 +87,12 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var nestedscroll: NestedScrollView
     lateinit var llalllistview: LinearLayout
-    lateinit var tvLoading: Ferrara_Bold
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.lifestyle_drawer)
+
 
         gson = Gson()
         init()
@@ -99,6 +100,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         // Set the toolbar
         setSupportActionBar(activity_main_toolbar)
+
 
         // Setup Recyclerview's Layout
         navigation_rv.layoutManager = GridLayoutManager(this, 3)
@@ -178,7 +180,6 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
     fun init() {
 
         llalllistview = findViewById(R.id.llalllistview)
-        tvLoading = findViewById(R.id.tvLoading)
         drawerLayout = findViewById(R.id.drawer_layout)
         nestedscroll = findViewById(R.id.nestedscroll)
         llHobbies = findViewById(R.id.llHobbies)
@@ -232,6 +233,17 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
         drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, GravityCompat.END);
 
 
+
+        getMusic()
+        getBooks()
+        getSportsData()
+        getFashionData()
+        getCusinesData()
+        getMovies()
+        getTvShowsData()
+
+
+
     }
 
 
@@ -239,8 +251,12 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
         val i = v.id
         if (i == R.id.llHobbies) {
 
-//            llalllistview.visibility = View.GONE
-//            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.VISIBLE
+            mShimmerView2!!.visibility = View.GONE
+
+//
 
             tvTitle1.visibility = View.VISIBLE
             tvTitle1.visibility = View.VISIBLE
@@ -269,8 +285,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llSports) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.VISIBLE
+            mShimmerView2!!.visibility = View.GONE
 
             llSpotify.visibility = View.GONE
             tvTitle1.visibility = View.VISIBLE
@@ -300,7 +318,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
 
             llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+           
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+            
+
 
             tvTitle1.visibility = View.VISIBLE
             tvTitle2.visibility = View.VISIBLE
@@ -331,8 +353,12 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llFashion) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+            
+
 
             hobbies_layout.visibility = View.GONE
             fashion_layout.visibility = View.VISIBLE
@@ -354,8 +380,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llMusic) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+//             llalllistview.visibility = View.GONE
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+            
+
 
             llSpotify.visibility = View.VISIBLE
             hobbies_layout.visibility = View.VISIBLE
@@ -377,8 +406,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llBooks) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+
 
             llSpotify.visibility = View.GONE
             hobbies_layout.visibility = View.VISIBLE
@@ -405,8 +437,12 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llMovies) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+            
+
 
             llSpotify.visibility = View.GONE
             hobbies_layout.visibility = View.VISIBLE
@@ -433,8 +469,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llCountrisVisited) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+            mShimmerViewContainer!!.startShimmer()
+            mShimmerViewContainer!!.visibility = View.VISIBLE
+            mShimmerView2!!.visibility = View.GONE
+
 
             llSpotify.visibility = View.GONE
             tvTitle2.visibility = View.VISIBLE
@@ -458,8 +497,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.llPets) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+           
+            mShimmerViewContainer!!.visibility = View.VISIBLE
+            mShimmerView2!!.visibility = View.GONE
+
 
             tvTitle1.visibility = View.GONE
             tvTitle2.visibility = View.GONE
@@ -487,8 +529,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
         } else if (i == R.id.lltvshows) {
 
-            llalllistview.visibility = View.GONE
-            tvLoading.visibility = View.VISIBLE
+             llalllistview.visibility = View.GONE
+            mShimmerViewContainer!!.visibility = View.GONE
+            mShimmerView2!!.visibility = View.VISIBLE
+
 
             tvTitle1.visibility = View.VISIBLE
             tvTitle2.visibility = View.VISIBLE
@@ -568,8 +612,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
+
 
                     hobies_adapter = HobbiesAdapter(this@Lifestyle_Activity, popular_list)
                     indoor_adapter = HobbiesAdapter(this@Lifestyle_Activity, indoor_list)
@@ -587,6 +630,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     hobies_adapter.notifyDataSetChanged()
                     indoor_adapter.notifyDataSetChanged()
                     outdoor_adapter.notifyDataSetChanged()
+
+//                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
+
 
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -617,6 +665,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
+
                     val string = response.body()!!.string()
                     val jsonObject = JSONObject(string)
                     val jsonObjectInfo = jsonObject.getJSONObject("info")
@@ -628,20 +677,22 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
 
                     tvTitle2.visibility = View.GONE
                     tvTitle3.visibility = View.GONE
                     rv_indoor.visibility = View.GONE
                     rv_outdoor.visibility = View.GONE
 
-                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list, "1")
+                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list)
 
                     navigation_rv.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
 
                     navigation_rv.adapter = popular_adapter
                     popular_adapter.notifyDataSetChanged()
+
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
 
                 } catch (e: Exception) {
@@ -689,15 +740,18 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     rv_indoor.visibility = View.GONE
                     rv_outdoor.visibility = View.GONE
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
 
-                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list, "1")
+
+                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list)
 
                     navigation_rv.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
-
+                    llalllistview.visibility = View.VISIBLE
                     navigation_rv.adapter = popular_adapter
                     popular_adapter.notifyDataSetChanged()
+
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+
 
 
                 } catch (e: Exception) {
@@ -729,6 +783,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
+
                     val string = response.body()!!.string()
                     val jsonObject = JSONObject(string)
                     val jsonObjectInfo = jsonObject.getJSONObject("info")
@@ -749,8 +804,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         jsonarray_outdoor.toString(),
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
+
 
                     hobies_adapter = HobbiesAdapter(this@Lifestyle_Activity, popular_list)
                     indoor_adapter = HobbiesAdapter(this@Lifestyle_Activity, indoor_list)
@@ -773,6 +827,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     navigation_rv.visibility=View.VISIBLE
                     rv_indoor.visibility=View.VISIBLE
                     rv_outdoor.visibility=View.VISIBLE
+
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
 
                 } catch (e: Exception) {
@@ -804,6 +862,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
+
                     tvT1.setText(resources.getString(R.string.popular_brands))
                     tvT2.setText(resources.getString(R.string.premium))
                     tvT3.setText(resources.getString(R.string.casual))
@@ -855,8 +914,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
+
 
                     /*Fashion*/
 
@@ -869,15 +927,15 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     rv_makeup.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
 
 
-                    val popular_adapter = FashionAdapter(this@Lifestyle_Activity, popular_list, "2")
-                    val prem_adapter = FashionAdapter(this@Lifestyle_Activity, premium_list, "2")
-                    val casual_adapter = FashionAdapter(this@Lifestyle_Activity, casual_list, "2")
-                    val sports_adapter = FashionAdapter(this@Lifestyle_Activity, sports_list, "2")
+                    val popular_adapter = FashionAdapter(this@Lifestyle_Activity, popular_list)
+                    val prem_adapter = FashionAdapter(this@Lifestyle_Activity, premium_list)
+                    val casual_adapter = FashionAdapter(this@Lifestyle_Activity, casual_list)
+                    val sports_adapter = FashionAdapter(this@Lifestyle_Activity, sports_list)
                     val designer_adapter =
-                        FashionAdapter(this@Lifestyle_Activity, designer_list, "2")
+                        FashionAdapter(this@Lifestyle_Activity, designer_list)
                     val offcial_adapter =
-                        FashionAdapter(this@Lifestyle_Activity, official_list, "2")
-                    val make_adapter = FashionAdapter(this@Lifestyle_Activity, makeup_list, "2")
+                        FashionAdapter(this@Lifestyle_Activity, official_list)
+                    val make_adapter = FashionAdapter(this@Lifestyle_Activity, makeup_list)
 
 
 
@@ -898,6 +956,11 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     offcial_adapter.notifyDataSetChanged()
                     make_adapter.notifyDataSetChanged()
 
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+
+                    llalllistview.visibility = View.VISIBLE
 
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -926,6 +989,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
+
                     val string = response.body()!!.string()
                     val jsonObject = JSONObject(string)
                     val jsonObjectInfo = jsonObject.getJSONObject("info")
@@ -946,14 +1010,13 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         jsonarray_regional.toString(),
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
 
 
-                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list, "1")
-                    val global_adapter = CusineAdapter(this@Lifestyle_Activity, global_list, "1")
+
+                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list)
+                    val global_adapter = CusineAdapter(this@Lifestyle_Activity, global_list)
                     val regional_adapter =
-                        CusineAdapter(this@Lifestyle_Activity, regional_list, "1")
+                        CusineAdapter(this@Lifestyle_Activity, regional_list)
 
 
                     navigation_rv.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
@@ -969,6 +1032,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     global_adapter.notifyDataSetChanged()
                     regional_adapter.notifyDataSetChanged()
 
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -999,6 +1066,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
+
                     val string = response.body()!!.string()
                     val jsonObject = JSONObject(string)
                     val jsonObjectInfo = jsonObject.getJSONObject("info")
@@ -1015,15 +1083,19 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     rv_indoor.visibility = View.GONE
                     rv_outdoor.visibility = View.GONE
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
 
-                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list, "1")
+
+                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list)
 
                     navigation_rv.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
 
                     navigation_rv.adapter = popular_adapter
                     popular_adapter.notifyDataSetChanged()
+
+                    llalllistview.visibility = View.VISIBLE
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+
 
 
                 } catch (e: Exception) {
@@ -1055,7 +1127,6 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 try {
-
                     val string = response.body()!!.string()
                     val jsonObject = JSONObject(string)
                     val jsonObjectInfo = jsonObject.getJSONObject("info")
@@ -1073,14 +1144,8 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
-
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
-
-                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list, "1")
-                    val genre_adapter = CusineAdapter(this@Lifestyle_Activity, genre_list, "1")
+                    val popular_adapter = CusineAdapter(this@Lifestyle_Activity, popular_list)
+                    val genre_adapter = CusineAdapter(this@Lifestyle_Activity, genre_list)
 
 
                     navigation_rv.layoutManager = GridLayoutManager(this@Lifestyle_Activity, 2)
@@ -1093,6 +1158,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
 
                     popular_adapter.notifyDataSetChanged()
                     genre_adapter.notifyDataSetChanged()
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    mShimmerView2!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
 
                 } catch (e: Exception) {
@@ -1135,8 +1204,7 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
+
 
                     val popular_adapter = HobbiesAdapter(this@Lifestyle_Activity, popular_list)
 
@@ -1145,6 +1213,10 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     navigation_rv.adapter = popular_adapter
 
                     popular_adapter.notifyDataSetChanged()
+
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
 
                 } catch (e: Exception) {
@@ -1222,8 +1294,8 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                         object : TypeToken<List<Hobbies>>() {}.type
                     )
 
-                    llalllistview.visibility = View.VISIBLE
-                    tvLoading.visibility = View.GONE
+
+
 
                     val asia_adapter = HobbiesAdapter(this@Lifestyle_Activity, asia_list)
                     val euro_adapter = HobbiesAdapter(this@Lifestyle_Activity, europe_list)
@@ -1258,8 +1330,9 @@ class Lifestyle_Activity : AppCompatActivity(), View.OnClickListener {
                     austr_adapter.notifyDataSetChanged()
                     africa_adapter.notifyDataSetChanged()
 
-
-
+                    
+                    mShimmerViewContainer!!.visibility = View.GONE
+                    llalllistview.visibility = View.VISIBLE
 
                 } catch (e: Exception) {
                     e.printStackTrace()

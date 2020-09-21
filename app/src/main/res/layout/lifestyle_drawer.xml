@@ -48,6 +48,11 @@
             android:background="@color/white"
             android:clipToPadding="false" />
 
+        <ImageView
+            android:id="@+id/ivTestImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150dp"/>
+
     </LinearLayout>
     <!-- Main Activity End -->
 

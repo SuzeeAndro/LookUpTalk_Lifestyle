@@ -58,8 +58,6 @@ class FlagListAdapter(private val mContext: Context, private var mflagsList: Lis
             .load(mFlagmodel.url)
             .into(holder.ivFlagImage);
 
-
-
         holder.llFlag.setBackgroundColor(if (mFlagmodel.isSelected) mContext.resources.getColor(R.color.selected_flag) else Color.WHITE)
         holder.llFlag.setOnClickListener(View.OnClickListener {
 

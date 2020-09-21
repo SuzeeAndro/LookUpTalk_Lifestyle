@@ -2,35 +2,40 @@ package com.lookuptalk.adapter
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import coil.Coil
+import coil.ImageLoader
+import coil.api.load
+import com.android.volley.toolbox.ImageRequest
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
+import com.facebook.shimmer.Shimmer
+import com.facebook.shimmer.ShimmerDrawable
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.model.Hobbies
+import okhttp3.HttpUrl
 
-class CusineAdapter(private val mContext: Context, private var mHobiesList: List<Hobbies>,val value:String) :
+class CusineAdapter(private val mContext: Context, private var mHobiesList: List<Hobbies>) :
     RecyclerView.Adapter<CusineAdapter.MyViewHolder>() {
 
     internal lateinit var mHobiesModel: Hobbies
 
 
-//    val dates = arrayOf("16th Nov,2019", "17th Nov,2019", "18th Nov,2019","19th Nov,2019", "20th Nov,2019", "21th Nov,2019")
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         lateinit var tvFlagName: MyTextView_Normal
         lateinit var ivFlagImage: ImageView
         var cvLayout: ConstraintLayout
 //        lateinit var cardLayout: CardView
-
-
 
 
         init {
@@ -54,37 +59,39 @@ class CusineAdapter(private val mContext: Context, private var mHobiesList: List
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         mHobiesModel = mHobiesList[position]
 
-        if(value.equals("1")){
-            holder.tvFlagName.text = mHobiesModel.name
-            holder.tvFlagName.visibility=View.VISIBLE
-
-        }
+//        Glide.with(mContext).load(mHobiesModel.url)
+//            .into(holder.ivFlagImage)
 
         Glide.with(mContext)
             .load(mHobiesModel.url)
+            .placeholder(R.drawable.avatar)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(holder.ivFlagImage);
-        holder.cvLayout.setBackgroundColor(if (mHobiesModel.isSelected) mContext.resources.getColor(R.color.selected_flag)
-        else Color.WHITE)
-//        holder.cardLayout.setBackgroundColor(if (mHobiesModel.isSelected) mContext.resources.getColor(R.color.selected_flag)
-//        else Color.WHITE)
+
+        holder.tvFlagName.text = mHobiesModel.name
+
+
+
+        holder.cvLayout.setBackgroundColor(
+            if (mHobiesModel.isSelected) mContext.resources.getColor(
+                R.color.selected_flag
+            ) else Color.WHITE
+        )
 
         holder.cvLayout.setOnClickListener(View.OnClickListener {
 
             mHobiesModel = mHobiesList[position]
             mHobiesModel.setSelected(!mHobiesModel.isSelected)
+
             holder.cvLayout.setBackgroundColor(
                 if (mHobiesModel.isSelected()) mContext.resources.getColor(
                     R.color.selected_flag
                 ) else Color.WHITE
             )
-//            holder.cardLayout.setBackgroundColor(
-//                if (mHobiesModel.isSelected()) mContext.resources.getColor(
-//                    R.color.selected_flag
-//                ) else Color.WHITE
-//            )
-            if (mHobiesModel.isSelected){
+
+            if (mHobiesModel.isSelected) {
                 holder.tvFlagName.setTextColor(Color.WHITE)
-            }else{
+            } else {
                 holder.tvFlagName.setTextColor(Color.BLACK)
             }
 
@@ -94,42 +101,12 @@ class CusineAdapter(private val mContext: Context, private var mHobiesList: List
                     text += mHobiesModel.name
                 }
             }
-            Log.d("TAG", "Output : $text")
+//            Log.d("TAG", "Output : $text")
 
         })
 
+
     }
-
-//    override fun getFilter(): Filter {
-//        return object : Filter() {
-//            override fun performFiltering(constraint: CharSequence?): FilterResults {
-//                val charSearch = constraint.toString()
-//                if (charSearch.isEmpty()) {
-//
-//                } else {
-//                    val resultList = ArrayList<FlagsModel>()
-//                    for (row in mHobiesList) {
-//                        if (row.toLowerCase(Locale.ROOT).contains(charSearch.toLowerCase(Locale.ROOT))) {
-//                            resultList.add(row)
-//                        }
-//                    }
-////                    mHobiesList = resultList
-//                }
-//                val filterResults = FilterResults()
-//                filterResults.values = mHobiesList
-//                return filterResults
-//            }
-//
-//            @Suppress("UNCHECKED_CAST")
-//            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-//                mHobiesList = results?.values as ArrayList<FlagsModel>
-//                notifyDataSetChanged()
-//            }
-//
-//        }
-//    }
-
-
 
 
     override fun getItemCount(): Int {
