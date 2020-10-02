@@ -87,4 +87,25 @@ interface RetrofitService {
     val getskills: Call<ResponseBody>
 
 
+    /*Get MoviesNowPlaying*/
+    @GET("/3/movie/now_playing")
+    fun getMoviesList(@Query("api_key") api_key: String, @Query("language") language: String,
+                      @Query("page") page: String): Call<ResponseBody>
+
+    /*Get MoviesNowPlaying*/
+    @GET("/3/person")
+    fun getArtist(@Query("person_id") person_id: String,@Query("api_key") api_key: String, @Query("language") language: String,
+                      @Query("page") page: String): Call<ResponseBody>
+
+
+    /*Get MoviesNowPlaying*/
+    @GET("/3/tv/popular")
+    fun getTVShows(@Query("api_key") api_key: String, @Query("language") language: String,
+                      @Query("page") page: String): Call<ResponseBody>
+
+    /*Get MoviesNowPlaying*/
+    @GET("/3/search/movie")
+    fun getMoviesSearch(@Query("api_key") api_key: String, @Query("language") language: String, @Query("query") query: String, @Query("page") page: String): Call<ResponseBody>
+
+
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMoviesIMDB"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.lookuptalk.customfonts.Ferrara_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favourite_artist"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:padding="@dimen/_5sdp" />
+
+
+        <com.lookuptalk.customfonts.Ferrara_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/favourite_movies"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_imdb"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:clipToPadding="false"
+            android:padding="@dimen/_5sdp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

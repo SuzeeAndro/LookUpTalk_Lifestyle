@@ -27,13 +27,11 @@ import com.lb.utils.Constants
 import com.lb.utils.UserSession
 import com.lookuptalk.LoginResponse
 import com.lookuptalk.R
-import com.lookuptalk.adapter.FlagListAdapter
 import com.lookuptalk.customfonts.EditeText_font
 import com.lookuptalk.customfonts.Ferrara_Bold
 import com.lookuptalk.customfonts.MyTextView_Bold
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.helper.SelectableRoundedImageView
-import com.lookuptalk.model.ModelFlag
 import kotlinx.android.synthetic.main.professional_content.*
 import okhttp3.ResponseBody
 import org.json.JSONException
@@ -368,7 +366,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 e.printStackTrace()
             }
 
-            val intent = Intent(this@PersonalDetailsActivity, Lifestyle_Activity::class.java)
+            val intent = Intent(this@PersonalDetailsActivity, Lifestyle::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.move_left_enter, R.anim.move_left_exit)
             finish();

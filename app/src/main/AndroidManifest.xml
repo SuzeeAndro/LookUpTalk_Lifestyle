@@ -16,7 +16,7 @@
         android:theme="@style/Theme.App"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.Lifestyle_Activity"
+            android:name=".ui.Splashscreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

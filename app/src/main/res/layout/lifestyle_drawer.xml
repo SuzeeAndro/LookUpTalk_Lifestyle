@@ -58,7 +58,7 @@
 
 
     <!-- Custom Navigation Drawer Start -->
-    <include layout="@layout/lifestyle_navigation" />
+    <include layout="@layout/navigation_lifestyle" />
 
     <!-- Custom Navigation Drawer End -->
 

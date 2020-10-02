@@ -56,7 +56,7 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
     private val RC_SIGN_IN = 9001
 
     private var googleEmail: String = ""
-
+    private var app_token: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +66,6 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.login_layout)
-
 
 
         /*Google LOgin*/
@@ -91,7 +90,6 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
 
 
     }
-
 
 
     private fun init() {
@@ -212,6 +210,12 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
             ) {
 
                 val string = response.body()!!.toString()
+//                val jsonObject = JSONObject(string)
+//                val jsonobj1 = jsonObject.getJSONObject("info")
+//
+//                app_token = jsonobj1.getString("token")
+//                UserSession(this@LoginActivity).setAppToken(app_token)
+
                 if (response.body()!!.description.equals("Otp Sent Successfully")) {
 
                     Toast.makeText(this@LoginActivity, "Otp Sent Successfully", Toast.LENGTH_SHORT)

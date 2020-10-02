@@ -13,8 +13,10 @@
     <color name="gray">#6A6A6A</color>
     <color name="flag_textcolor">#3B3737</color>
     <color name="gray3">#8F8F8F</color>
+    <color name="border_music">#B4B4B4</color>
     <color name="getstart_text">#07579C</color>
     <color name="white_gray">#F5F5F5</color>
+    <color name="music_select">#F3F3F3</color>
     <color name="gray2">#EBEBEB</color>
     <color name="getstarted_blue">#2670CF</color>
     <color name="line_gray">#E2E2E2</color>

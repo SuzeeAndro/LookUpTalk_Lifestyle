@@ -9,9 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginRight="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
         app:cardCornerRadius="4dp"
         app:cardElevation="4dp">
 
@@ -27,8 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:padding="@dimen/_5sdp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
 
                 <ImageView
                     android:id="@+id/ivFlagImage"
@@ -45,9 +43,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
                 android:lines="2"
                 android:padding="@dimen/_2sdp"
-                android:gravity="center"
                 android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/flag_textcolor"

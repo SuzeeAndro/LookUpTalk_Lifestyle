@@ -49,6 +49,7 @@
     <string name="fashion_brand">Fashion Brands</string>
     <string name="cusine">Cuisine</string>
     <string name="movies">Movies</string>
+    <string name="movies_hint">Add your favourite Artists &amp; Movies</string>
     <string name="tvshows">TV Shows</string>
     <string name="countries_visited">Countries Travelled</string>
     <string name="pets_care">Pets</string>
@@ -181,5 +182,10 @@
     <string name="s_america">South America</string>
     <string name="australia">Australia</string>
     <string name="africa">Africa</string>
+    <string name="favourite_artist">FAVOURITE ARTIST</string>
+    <string name="favourite_movies">FAVOURITE MOVIES</string>
     <string name="connect_music">Connect your Music with</string>
+    <string name="connect_account">Connect your account to add yout top artists based on your streams</string>
+    <string name="moviestext_hint"><font size="2">Add your favourite Artists &amp; Movies</font></string>
+
 </resources>

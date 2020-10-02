@@ -103,20 +103,20 @@ class UserSession(// Context
     /*Save Token*/
 
     /*Get Fcm Token*/
-    fun setToken(value: String) {
+    fun setAppToken(value: String) {
         editor.putString(SET_TOKEN, value)
         editor.apply()
     }
 
 
     /*Get Fcm Token*/
-    fun getToken(value: String) {
+    fun getAppToken(value: String) {
         editor.putString(SET_TOKEN, value)
         editor.apply()
     }
 
     /*Remove Fcm Token*/
-    fun removeToken() {
+    fun removeAppToken() {
         editor.remove(SET_TOKEN)
         editor.apply()
     }
@@ -364,18 +364,34 @@ class UserSession(// Context
     }
 
     /*LOGIN Number*/
-    fun setUserBasicInfo(value: String) {
-        editor.putString(USER_INFO, value)
+    fun setLifestylevalue(value: String) {
+        editor.putString(LIFESTYLE_OPTION, value)
         editor.apply()
     }
 
 
-    fun getUserBasicInfo(): String {
-        return pref.getString(USER_INFO, "")!!
+    fun getLifestylevalue(): String {
+        return pref.getString(LIFESTYLE_OPTION, "")!!
     }
 
-    fun removeUserBasicInfo() {
-        editor.remove(USER_INFO)
+    fun removesetLifestylevalue() {
+        editor.remove(LIFESTYLE_OPTION)
+        editor.apply()
+    }
+
+    /*IMDB_Search*/
+    fun setimdbSearch(value: String) {
+        editor.putString(IMDB_SEARCH, value)
+        editor.apply()
+    }
+
+
+    fun getimdbSearch(): String {
+        return pref.getString(IMDB_SEARCH, "")!!
+    }
+
+    fun removeimdbSearch() {
+        editor.remove(IMDB_SEARCH)
         editor.apply()
     }
 
@@ -592,6 +608,8 @@ class UserSession(// Context
         private val NID = "nid"
         private val NEW_Cust_NID = "new_cust_nid "
         private val USER_INFO = "user_info "
+        private val LIFESTYLE_OPTION = "lifestyle_option "
+        private val IMDB_SEARCH = "imdb_search "
         private val DMS_PROFILE = "dms_profile "
         private val SELLERPROFILES = "seller_details"
         private val PHONE_ID = "phone_ID"

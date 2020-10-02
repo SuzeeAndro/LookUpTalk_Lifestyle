@@ -13,12 +13,10 @@ object Constants {
 
 
     val LUT_Url = "http://15.207.44.182:3000/"
+    val IMDB_Url = "https://api.themoviedb.org/"
+    val API_Key = "6b869eb417d00f9ae626051993311996"
+    val ImagePath = "https://image.tmdb.org/t/p/w500"
 
-    val PIE_CHART_COLORS = intArrayOf(
-        Color.rgb(36, 247, 26),
-        Color.rgb(227, 7, 30),
-        Color.rgb(227, 7, 30)
-    )
 
 
 
@@ -30,6 +28,13 @@ object Constants {
 
     val retrofitService = Retrofit.Builder()
         .baseUrl(LUT_Url)
+        .client(okHttpClient)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build().create<RetrofitService>(RetrofitService::class.java!!)
+
+
+ val Imdb_service = Retrofit.Builder()
+        .baseUrl(IMDB_Url)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build().create<RetrofitService>(RetrofitService::class.java!!)
