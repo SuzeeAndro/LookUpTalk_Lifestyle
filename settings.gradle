@@ -1,3 +1,2 @@
-include ':tedimagepicker'
 include ':app'
 rootProject.name = "LookUpTalk"
