@@ -4,11 +4,6 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * Author     	:	Anıl Furkan Ökçün
- * Author mail	:	anilfurkanokcun@gmail.com
- * Create Date	:	30.08.2018
- */
 
 internal class GalleryItemDecoration(
 	private val gridSpacingPx: Int,

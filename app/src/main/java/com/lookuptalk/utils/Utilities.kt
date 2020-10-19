@@ -1,4 +1,4 @@
-package com.lb.utils
+package com.lookuptalk.utils
 
 import android.app.Activity
 import android.content.Context
@@ -57,6 +57,8 @@ object Utilities {
 
         }
     }
+
+
 
 
     fun getItemList(getItemAsList: ArrayList<String>, jsonResponse: String): ArrayList<String> {

@@ -2,7 +2,6 @@ package com.lookuptalk.ui
 
 import android.app.ProgressDialog
 import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,7 +10,6 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -22,13 +20,11 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import com.hbb20.CountryCodePicker
-import com.lb.utils.Constants
-import com.lb.utils.UserSession
-import com.lookuptalk.LoginResponse
-import com.lookuptalk.MainActivity
+import com.lookuptalk.utils.Constants
+import com.lookuptalk.utils.UserSession
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
-import com.lookuptalk.helper.SmsBroadcastReceiver
+import com.lookuptalk.model.LoginData
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Call
@@ -203,18 +199,12 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
         mProgressDialog.show()
 
 
-        val call: Call<LoginResponse> = Constants.retrofitService.getlogin(gsonObject)
-        call.enqueue(object : Callback<LoginResponse> {
+        val call: Call<LoginData> = Constants.retrofitService.getlogin(gsonObject)
+        call.enqueue(object : Callback<LoginData> {
             override fun onResponse(
-                call: Call<LoginResponse>, response: Response<LoginResponse>
+                call: Call<LoginData>, response: Response<LoginData>
             ) {
 
-                val string = response.body()!!.toString()
-//                val jsonObject = JSONObject(string)
-//                val jsonobj1 = jsonObject.getJSONObject("info")
-//
-//                app_token = jsonobj1.getString("token")
-//                UserSession(this@LoginActivity).setAppToken(app_token)
 
                 if (response.body()!!.description.equals("Otp Sent Successfully")) {
 
@@ -234,7 +224,7 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
 
             }
 
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+            override fun onFailure(call: Call<LoginData>, t: Throwable) {
                 mProgressDialog.dismiss()
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
             }
@@ -345,23 +335,23 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
         mProgressDialog.show()
 
 
-        val call: Call<LoginResponse> = Constants.retrofitService.getlogin(gsonObject)
-        call.enqueue(object : Callback<LoginResponse> {
+        val call: Call<LoginData> = Constants.retrofitService.getlogin(gsonObject)
+        call.enqueue(object : Callback<LoginData> {
             override fun onResponse(
-                call: Call<LoginResponse>, response: Response<LoginResponse>
+                call: Call<LoginData>, response: Response<LoginData>
             ) {
 
                 val string = response.body()!!.toString()
-                if (response.body()!!.description.equals("SUCCESS")) {
-
-                    UserSession(this@LoginActivity).setGoogleLogin(googleEmail)
-//                    Toast.makeText(this@LoginActivity, "Otp Verified", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@LoginActivity, SelectProfileActivity::class.java))
-                    overridePendingTransition(R.anim.move_left_enter, R.anim.move_left_exit)
-                    finish()
-                } else {
-                    Toast.makeText(this@LoginActivity, "Invalid", Toast.LENGTH_SHORT).show()
-                }
+//                if (response.body()!!.description.equals("SUCCESS")) {
+//
+//                    UserSession(this@LoginActivity).setGoogleLogin(googleEmail)
+////                    Toast.makeText(this@LoginActivity, "Otp Verified", Toast.LENGTH_SHORT).show()
+//                    startActivity(Intent(this@LoginActivity, SelectProfileActivity::class.java))
+//                    overridePendingTransition(R.anim.move_left_enter, R.anim.move_left_exit)
+//                    finish()
+//                } else {
+//                    Toast.makeText(this@LoginActivity, "Invalid", Toast.LENGTH_SHORT).show()
+//                }
 
 
                 //hiding progress dialog
@@ -369,7 +359,7 @@ class LoginActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeList
 
             }
 
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+            override fun onFailure(call: Call<LoginData>, t: Throwable) {
                 mProgressDialog.dismiss()
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
             }

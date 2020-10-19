@@ -16,7 +16,7 @@
         android:background="@color/white"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".ui.Lifestyle">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/activity_main_appbarlayout"

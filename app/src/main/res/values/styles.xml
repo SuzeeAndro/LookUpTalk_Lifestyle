@@ -121,4 +121,12 @@
         <attr name="android:scaleType" />
     </declare-styleable>
 
+    <!--SpinnerFOnt-->
+<!--    <style name="SpinnerTheme">-->
+<!--        <item name="android:textColor">#333333</item>-->
+<!--        <item name="android:fontFamily">@font</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--    </style>-->
+
+
 </resources>

@@ -14,13 +14,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.phone.SmsRetriever
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import com.lb.utils.Constants
-import com.lb.utils.UserSession
-import com.lookuptalk.LoginResponse
-import com.lookuptalk.MainActivity
+import com.lookuptalk.utils.Constants
+import com.lookuptalk.utils.UserSession
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.helper.SmsBroadcastReceiver
+import com.lookuptalk.model.LoginData
 import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Call
@@ -134,15 +133,16 @@ class Verfication_Activity : AppCompatActivity(),
         mProgressDialog.show()
 
 
-        val call: Call<LoginResponse> = Constants.retrofitService.getlogin(gsonObject)
-        call.enqueue(object : Callback<LoginResponse> {
+        val call: Call<LoginData> = Constants.retrofitService.getlogin(gsonObject)
+        call.enqueue(object : Callback<LoginData> {
             override fun onResponse(
-                call: Call<LoginResponse>, response: Response<LoginResponse>
+                call: Call<LoginData>, response: Response<LoginData>
             ) {
 
                 val string = response.body()!!.toString()
                 if (response.body()!!.description.equals("SUCCESS")) {
 
+                    UserSession(this@Verfication_Activity).setAppToken(response.body()!!.info.token)
                     UserSession(this@Verfication_Activity).setPhoneNum(mMobile)
                     Toast.makeText(this@Verfication_Activity, "Otp Verified", Toast.LENGTH_SHORT)
                         .show()
@@ -162,7 +162,7 @@ class Verfication_Activity : AppCompatActivity(),
 
             }
 
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+            override fun onFailure(call: Call<LoginData>, t: Throwable) {
                 mProgressDialog.dismiss()
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
             }

@@ -12,7 +12,7 @@ import com.facebook.*
 import com.facebook.login.BuildConfig
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.lb.utils.UserSession
+import com.lookuptalk.utils.UserSession
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
 import org.json.JSONException

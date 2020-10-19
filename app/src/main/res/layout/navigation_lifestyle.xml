@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/navigation_drawer_width"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:layout_gravity="right"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray2"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_40sdp"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_40sdp">
+
+
+                    <com.lookuptalk.customfonts.EditeText_bookman_Regular
+                        android:id="@+id/etFilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/border_search"
+                        android:drawableRight="@drawable/ic_search_icon"
+                        android:gravity="left|center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_13sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_20sdp" />
+
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedscroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/llpopular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@color/white_gray"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_15sdp">
+
+                            <ImageView
+                                android:id="@+id/ivImageTitle"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:src="@drawable/ic_music" />
+
+
+                            <com.lookuptalk.customfonts.Ferrara_Bold
+                                android:id="@+id/tvtitleLifestyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:textAllCaps="true"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="MUSIC"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_20sdp" />
+
+
+                        </LinearLayout>
+                        <include layout="@layout/movie_layout" />
+                        <include layout="@layout/music_layout" />
+                        <include layout="@layout/tvshows_layout" />
+                        <include layout="@layout/books_layout" />
+
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/mShimmerViewContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            shimmer:duration="1000">
+
+                            <!-- Adding 3 rows of placeholders -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/placeholder_item" />
+                                <include layout="@layout/placeholder_item" />
+                                <include layout="@layout/placeholder_item" />
+                                <include layout="@layout/placeholder_item" />
+                                <include layout="@layout/placeholder_item" />
+                                <include layout="@layout/placeholder_item" />
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/mShimmerView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            shimmer:duration="1000">
+
+                            <!-- Adding 3 rows of placeholders -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+                                <include layout="@layout/placeholder_fashion" />
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/navigation_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:adjustViewBounds="true"
+                            android:background="@color/white"
+                            android:clipToPadding="false"
+                            android:padding="@dimen/_5sdp" />
+
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+
+        <com.lookuptalk.customfonts.MyTextView_Normal
+            android:id="@+id/tvLifestyleSubmit"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_bg"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="@dimen/_20sdp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </RelativeLayout>
+</RelativeLayout>

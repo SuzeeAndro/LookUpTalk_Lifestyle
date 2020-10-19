@@ -1,10 +1,12 @@
-package com.lb.retrofitservice
+package com.lookuptalk.retrofitservice
 
 import com.google.gson.JsonObject
-import com.lookuptalk.LoginResponse
+import com.lookuptalk.model.LoginData
+import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
+
 
 /**
  * Created by SUJITH on 19/10/2019
@@ -12,7 +14,7 @@ import retrofit2.http.*
 interface RetrofitService {
 
     @POST("/api/user/authenticate/login")
-    fun getlogin(@Body body: JsonObject): Call<LoginResponse>
+    fun getlogin(@Body body: JsonObject): Call<LoginData>
 
     /*Get Flags Data*/
     @get:GET("/api/lookuptalk/flags/offset/0")
@@ -20,7 +22,7 @@ interface RetrofitService {
 
     /*Personal Data*/
     @POST("/api/social/profile")
-    fun updatePersonal(@Body body: JsonObject): Call<LoginResponse>
+    fun updatePersonal(@Body body: JsonObject): Call<LoginData>
 
 
     /*Occupations Data*/
@@ -28,46 +30,53 @@ interface RetrofitService {
     val getOccupations: Call<ResponseBody>
 
     /*Interest Data*/
-    @get:GET("/api/master/lifestyle/interests")
-    val getHobiesInterest: Call<ResponseBody>
+    @GET("/api/master/lifestyle/interests")
+    fun getHobiesInterest(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*SPorts Data*/
-    @get:GET("/api/master/lifestyle/sports")
-    val getSports: Call<ResponseBody>
+    @GET("/api/master/lifestyle/sports")
+    fun getSports(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*countries Data*/
-    @get:GET("/api/master/lifestyle/countries")
-    val getcountries: Call<ResponseBody>
+    @GET("/api/master/lifestyle/countries")
+    fun getcountries(@Header("Authorization") authHeader: String): Call<ResponseBody>
 
     /*Fashion Data*/
-    @get:GET("/api/master/lifestyle/fashions")
-    val getfashions: Call<ResponseBody>
+    @GET("/api/master/lifestyle/fashions")
+    fun getfashions(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*Cusines Data*/
-    @get:GET("/api/master/lifestyle/cuisines")
-    val getcuisines: Call<ResponseBody>
+    @GET("/api/master/lifestyle/cuisines")
+    fun getcuisines(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*Pets*/
-    @get:GET("api/master/lifestyle/pets")
-    val getpets: Call<ResponseBody>
+    @GET("api/master/lifestyle/pets")
+    fun getpets(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
 
     /*Music*/
-    @get:GET("api/master/lifestyle/musics")
-    val getMusic: Call<ResponseBody>
+    @GET("api/master/lifestyle/musics")
+    fun getMusic(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*Shows*/
-    @get:GET("api/master/lifestyle/shows")
-    val getShows: Call<ResponseBody>
+    @GET("api/master/lifestyle/shows")
+    fun getShows(@Header("Authorization") authHeader: String): Call<ResponseBody>
 
 
     /*books*/
-    @get:GET("api/master/lifestyle/books")
-    val getBooks: Call<ResponseBody>
+    @GET("api/master/lifestyle/books")
+    fun getBooks(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
 
     /*movies*/
-    @get:GET("api/master/lifestyle/movies")
-    val getMovies: Call<ResponseBody>
+    @GET("api/master/lifestyle/movies")
+    fun getMovies(@Header("Authorization") authHeader: String): Call<ResponseBody>
 
     /*Occupations Data*/
     @get:GET("/api/master/heights")
@@ -88,24 +97,59 @@ interface RetrofitService {
 
 
     /*Get MoviesNowPlaying*/
-    @GET("/3/movie/now_playing")
-    fun getMoviesList(@Query("api_key") api_key: String, @Query("language") language: String,
-                      @Query("page") page: String): Call<ResponseBody>
-
-    /*Get MoviesNowPlaying*/
-    @GET("/3/person")
-    fun getArtist(@Query("person_id") person_id: String,@Query("api_key") api_key: String, @Query("language") language: String,
-                      @Query("page") page: String): Call<ResponseBody>
-
-
-    /*Get MoviesNowPlaying*/
     @GET("/3/tv/popular")
-    fun getTVShows(@Query("api_key") api_key: String, @Query("language") language: String,
-                      @Query("page") page: String): Call<ResponseBody>
+    fun getTVShows(@Query("api_key") api_key: String, @Query("language") language: String, @Query("page") page: String): Call<ResponseBody>
+
+    /*Get BooksAPI*/
+    @GET("v1/volumes/")
+    fun getBooksSearch(@Query("q") search_string: String): Call<ResponseBody>
+
+    /*Get BooksAPI*/
+    @GET("v1/volumes/{volumeId}")
+    fun getBooksByID(@Path("volumeId") volumeId: String): Call<ResponseBody>
 
     /*Get MoviesNowPlaying*/
     @GET("/3/search/movie")
-    fun getMoviesSearch(@Query("api_key") api_key: String, @Query("language") language: String, @Query("query") query: String, @Query("page") page: String): Call<ResponseBody>
+    fun getMoviesSearch(
+        @Query("api_key") api_key: String, @Query("language") language: String, @Query("query") query: String, @Query("page") page: String): Call<ResponseBody>
+
+    /*Get MoviesNowPlaying*/
+    @GET("/3/search/person")
+    fun getMovieArtistSearch(
+        @Query("api_key") api_key: String, @Query("language") language: String, @Query("query") query: String, @Query("page") page: String): Call<ResponseBody>
+
+    /*Get TVShowsSearch*/
+    @GET("/3/search/tv")
+    fun getTVShowsSearch(
+        @Query("api_key") api_key: String, @Query("language") language: String, @Query("query") query: String, @Query("page") page: String): Call<ResponseBody>
+
+    /*Get MovieFromId*/
+    @GET("/3/movie/{movie_id}")
+    fun getMovieFromId(@Path("movie_id") movie_id: Long, @Query("api_key") api_key: String, @Query("language") language: String): Call<ResponseBody>
+
+    /*Get MovieFromId*/
+    @GET("/3/tv/{tv_id}")
+    fun geTVShowsFromId(@Path("tv_id") tv_id: Long, @Query("api_key") api_key: String, @Query("language") language: String): Call<ResponseBody>
+
+    /*Get ArtistFromId*/
+    @GET("/3/person/{person_id}")
+    fun getArtistFromId(@Path("person_id") person_id: Long, @Query("api_key") api_key: String, @Query("language") language: String): Call<ResponseBody>
+
+    /*Get MoviesNowPlaying*/
+    @POST("/api/social")
+    fun AddFavoriteMovies(@Body body: JsonObject): Call<ResponseBody>
+
+    /*Get Favorites Data*/
+    @GET("/api/social")
+    fun getFavoriteMovies(@Header("Authorization") authHeader: String): Call<ResponseBody>
+
+    /*Get Spotify Data*/
+    @GET("/v1/me/following")
+    fun getSpotify_Artist(@Header("Authorization") authHeader: String, @Query("type") type: String): Call<ResponseBody>
+
+    /*Delete Favorites Data*/
+    @HTTP(method = "DELETE", path = "/api/social/lifestyle", hasBody = true)
+    fun deleteFavorite(@Body body: JsonObject): Call<ResponseBody>
 
 
 }

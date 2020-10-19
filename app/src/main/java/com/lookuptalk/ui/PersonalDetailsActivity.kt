@@ -5,34 +5,23 @@ import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Typeface
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.*
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatSpinner
 import com.bumptech.glide.Glide
-import com.github.clans.fab.FloatingActionButton
 import com.google.gson.Gson
 import com.google.gson.JsonObject
-import com.google.gson.JsonParser
-import com.google.gson.reflect.TypeToken
-import com.lb.utils.Constants
-import com.lb.utils.UserSession
-import com.lookuptalk.LoginResponse
+import com.lookuptalk.utils.Constants
+import com.lookuptalk.utils.UserSession
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.EditeText_font
 import com.lookuptalk.customfonts.Ferrara_Bold
-import com.lookuptalk.customfonts.MyTextView_Bold
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.helper.SelectableRoundedImageView
-import kotlinx.android.synthetic.main.professional_content.*
 import okhttp3.ResponseBody
 import org.json.JSONException
 import org.json.JSONObject
@@ -114,10 +103,10 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
         // Get Device Width in Px
 
 
-        getOccupations()
-        getHeights()
-        getSkills()
-        getIndustry()
+//        getOccupations()
+//        getHeights()
+//        getSkills()
+//        getIndustry()
 
         val data = UserSession(this@PersonalDetailsActivity).getGoogleData()
         task_dict_data = JSONObject()
@@ -338,33 +327,33 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
             mLocation = tvLocation.text.toString()
 
 
-            gsonObject = JsonObject()
-            try {
-                val login_json = JSONObject()
-                login_json.put("fullName", mName)
-                login_json.put("sex", mSex)
-                login_json.put("age", mAge)
-                login_json.put("maritalStatus", mMaritalStatus)
-                login_json.put("sexualOrientation", mSexialOrientation)
-                login_json.put("location", mLocation)
-                login_json.put("qualification", mQualification)
-                login_json.put("height", mHeight)
-                login_json.put("bodyType", mBodyType)
-                login_json.put("occupation", mOccupation)
-                login_json.put("smoke", mSmoke)
-                login_json.put("drink", mDrink)
-                login_json.put("description", mAboutYourself)
-
-                val jsonParser = JsonParser()
-                gsonObject = jsonParser.parse(login_json.toString()) as JsonObject
-//            updatepersonalData(gsonObject)
-//                    startActivity(Intent(this@LoginActivity, Verfication_Activity::class.java))
-//                    overridePendingTransition(R.anim.move_left_enter, R.anim.move_left_exit)
-//                    finish()
-
-            } catch (e: JSONException) {
-                e.printStackTrace()
-            }
+//            gsonObject = JsonObject()
+//            try {
+//                val login_json = JSONObject()
+//                login_json.put("fullName", mName)
+//                login_json.put("sex", mSex)
+//                login_json.put("age", mAge)
+//                login_json.put("maritalStatus", mMaritalStatus)
+//                login_json.put("sexualOrientation", mSexialOrientation)
+//                login_json.put("location", mLocation)
+//                login_json.put("qualification", mQualification)
+//                login_json.put("height", mHeight)
+//                login_json.put("bodyType", mBodyType)
+//                login_json.put("occupation", mOccupation)
+//                login_json.put("smoke", mSmoke)
+//                login_json.put("drink", mDrink)
+//                login_json.put("description", mAboutYourself)
+//
+//                val jsonParser = JsonParser()
+//                gsonObject = jsonParser.parse(login_json.toString()) as JsonObject
+////            updatepersonalData(gsonObject)
+////                    startActivity(Intent(this@LoginActivity, Verfication_Activity::class.java))
+////                    overridePendingTransition(R.anim.move_left_enter, R.anim.move_left_exit)
+////                    finish()
+//
+//            } catch (e: JSONException) {
+//                e.printStackTrace()
+//            }
 
             val intent = Intent(this@PersonalDetailsActivity, Lifestyle::class.java)
             startActivity(intent)
@@ -394,36 +383,36 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
-    private fun updatepersonalData(gsonObject: JsonObject) {
-        val mProgressDialog = ProgressDialog(this@PersonalDetailsActivity)
-        mProgressDialog.isIndeterminate = true
-        mProgressDialog.setMessage("Loading...")
-        mProgressDialog.show()
-
-
-        val call: Call<LoginResponse> = Constants.retrofitService.updatePersonal(gsonObject)
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(
-                call: Call<LoginResponse>, response: Response<LoginResponse>
-            ) {
-
-                val string = response.body()!!.toString()
-                if (response.body()!!.description.equals("Otp Sent Successfully")) {
-
-                }
-
-
-                //hiding progress dialog
-                mProgressDialog.dismiss()
-
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                mProgressDialog.dismiss()
-                Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-            }
-        })
-    }
+//    private fun updatepersonalData(gsonObject: JsonObject) {
+//        val mProgressDialog = ProgressDialog(this@PersonalDetailsActivity)
+//        mProgressDialog.isIndeterminate = true
+//        mProgressDialog.setMessage("Loading...")
+//        mProgressDialog.show()
+//
+//
+//        val call: Call<LoginResponse> = Constants.retrofitService.updatePersonal(gsonObject)
+//        call.enqueue(object : Callback<LoginResponse> {
+//            override fun onResponse(
+//                call: Call<LoginResponse>, response: Response<LoginResponse>
+//            ) {
+//
+//                val string = response.body()!!.toString()
+//                if (response.body()!!.description.equals("Otp Sent Successfully")) {
+//
+//                }
+//
+//
+//                //hiding progress dialog
+//                mProgressDialog.dismiss()
+//
+//            }
+//
+//            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+//                mProgressDialog.dismiss()
+//                Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+//            }
+//        })
+//    }
 
     private fun getOccupations()
       {
@@ -452,7 +441,9 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     Log.e("TAG", "occuaptions***" + nameslist)
 
-                    sp_occupation.adapter = ArrayAdapter(this@PersonalDetailsActivity,android.R.layout.simple_spinner_dropdown_item, nameslist)
+                    sp_occupation.adapter = ArrayAdapter(this@PersonalDetailsActivity,
+                        android.R.layout.simple_spinner_dropdown_item, nameslist)
+
 
                     mProgressDialog.dismiss()
 
@@ -467,7 +458,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -518,7 +509,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -569,7 +560,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -620,7 +611,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -657,6 +648,7 @@ class PersonalDetailsActivity : AppCompatActivity(), View.OnClickListener {
 
     //handle result of picked image
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
 //            ivProfilePic.setImageURI(data?.data)
 

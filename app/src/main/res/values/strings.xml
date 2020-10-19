@@ -36,6 +36,7 @@
     <string name="professional_filter">Professional Filter</string>
     <string name="professional">Professional</string>
     <string name="fill_yourself">Fill by Yourself</string>
+    <string name="connect_spotify">Connect your spotify</string>
     <string name="fill_fb">Fill From Facebook</string>
     <string name="fill_likdin">Fill From Linkedin</string>
     <string name="lifestyle">Lifestyle</string>
@@ -182,10 +183,25 @@
     <string name="s_america">South America</string>
     <string name="australia">Australia</string>
     <string name="africa">Africa</string>
+    <string name="add_fav_show">Add your favorite TVShow</string>
+    <string name="select_tvchannel">Select your favorite TV Channels</string>
+    <string name="select_tvgenre">Select your favorite genre</string>
+    <string name="select_music">Select your favorite genre</string>
+    <string name="add_fav_artist">Add your favorite Artist</string>
+    <string name="add_fav_books">Add your favorite Books</string>
+    <string name="add_fav_movie">Add your favorite Movie</string>
     <string name="favourite_artist">FAVOURITE ARTIST</string>
     <string name="favourite_movies">FAVOURITE MOVIES</string>
+    <string name="favourite_tvshows">FAVOURITE TV SHOWS</string>
+    <string name="favourite_books">FAVOURITE BOOKS</string>
     <string name="connect_music">Connect your Music with</string>
     <string name="connect_account">Connect your account to add yout top artists based on your streams</string>
     <string name="moviestext_hint"><font size="2">Add your favourite Artists &amp; Movies</font></string>
+
+    <!--HomeScreen-->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="grid">Grid</string>
+    <string name="chat">Chat</string>
 
 </resources>

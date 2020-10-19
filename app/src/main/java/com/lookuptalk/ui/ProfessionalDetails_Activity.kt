@@ -15,10 +15,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.github.clans.fab.FloatingActionButton
-import com.lb.utils.Constants
+import com.lookuptalk.utils.Constants
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.Ferrara_Bold
-import com.lookuptalk.customfonts.MyTextView_Bold
 import com.lookuptalk.customfonts.MyTextView_Normal
 import com.lookuptalk.helper.SelectableRoundedImageView
 import okhttp3.ResponseBody
@@ -154,7 +153,7 @@ class ProfessionalDetails_Activity : AppCompatActivity(),View.OnClickListener{
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -207,7 +206,7 @@ class ProfessionalDetails_Activity : AppCompatActivity(),View.OnClickListener{
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -259,7 +258,7 @@ class ProfessionalDetails_Activity : AppCompatActivity(),View.OnClickListener{
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 

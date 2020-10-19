@@ -110,6 +110,14 @@
                                     android:textSize="@dimen/_17sdp" />
 
                                 <ImageView
+                                    android:id="@+id/ivhobbies"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:visibility="gone"
+                                    android:src="@drawable/ic_tickmark" />
+                                <ImageView
                                     android:layout_width="@dimen/_10sdp"
                                     android:layout_height="@dimen/_40sdp"
                                     android:layout_gravity="right|center"
@@ -149,6 +157,14 @@
                                     android:text="@string/music"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+                                <ImageView
+                                    android:id="@+id/ivmusic"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_gravity="right|center"
+                                    android:visibility="gone"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -190,6 +206,14 @@
                                     android:text="@string/books"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+                                <ImageView
+                                    android:id="@+id/ivbooks"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -231,6 +255,14 @@
                                     android:text="@string/sports"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+                                <ImageView
+                                    android:id="@+id/ivsports"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -272,6 +304,15 @@
                                     android:text="@string/fashion_brand"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:id="@+id/ivfashion"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -329,6 +370,14 @@
                                     android:text="@string/cusine"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+                                <ImageView
+                                    android:id="@+id/ivcuisine"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -372,6 +421,15 @@
                                     android:textSize="@dimen/_17sdp" />
 
                                 <ImageView
+                                    android:id="@+id/ivmovies"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
+
+                                <ImageView
                                     android:layout_width="@dimen/_10sdp"
                                     android:layout_height="@dimen/_40sdp"
                                     android:layout_gravity="right|center"
@@ -411,6 +469,16 @@
                                     android:text="@string/tvshows"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+
+
+                                <ImageView
+                                    android:id="@+id/ivTvshow"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"
@@ -454,6 +522,15 @@
                                     android:textSize="@dimen/_17sdp" />
 
                                 <ImageView
+                                    android:id="@+id/ivcountries"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
+
+                                <ImageView
                                     android:layout_width="@dimen/_10sdp"
                                     android:layout_height="@dimen/_40sdp"
                                     android:layout_gravity="right|center"
@@ -493,6 +570,15 @@
                                     android:text="@string/pets_care"
                                     android:textColor="@color/flag_textcolor"
                                     android:textSize="@dimen/_17sdp" />
+
+                                <ImageView
+                                    android:id="@+id/ivpets"
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right|center"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:src="@drawable/ic_tickmark" />
 
                                 <ImageView
                                     android:layout_width="@dimen/_10sdp"

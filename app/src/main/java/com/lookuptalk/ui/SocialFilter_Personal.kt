@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.RelativeLayout
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import com.lb.utils.Constants
+import com.lookuptalk.utils.Constants
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.Ferrara_Bold
 import com.lookuptalk.customfonts.MyTextView_Bold
@@ -145,7 +145,7 @@ class SocialFilter_Personal : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -196,7 +196,7 @@ class SocialFilter_Personal : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 

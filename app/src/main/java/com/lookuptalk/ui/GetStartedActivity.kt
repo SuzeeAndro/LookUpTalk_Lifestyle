@@ -6,7 +6,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.lb.utils.UserSession
+import com.lookuptalk.utils.UserSession
 import com.lookuptalk.R
 import com.lookuptalk.customfonts.MyTextView_Normal
 

@@ -1,6 +1,5 @@
 package com.lookuptalk.ui
 
-import android.R
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.RelativeLayout
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import com.lb.utils.Constants
+import com.lookuptalk.utils.Constants
 import com.lookuptalk.customfonts.MyTextView_Bold
-import com.mohammedalaa.seekbar.DoubleValueSeekBarView
-import com.mohammedalaa.seekbar.OnDoubleValueSeekBarChangeListener
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
@@ -104,7 +101,7 @@ class SocialFilter_Professional : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -155,7 +152,7 @@ class SocialFilter_Professional : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
@@ -206,7 +203,7 @@ class SocialFilter_Professional : AppCompatActivity(), View.OnClickListener {
                 Log.e(
                     "TAG",
                     "onFailure() called with: call = [" + call.request()
-                        .url() + "], t = [" + t + "]",
+                        .url + "], t = [" + t + "]",
                     t
                 )
 
